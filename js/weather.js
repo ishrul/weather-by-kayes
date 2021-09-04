@@ -53,7 +53,7 @@ const displayWeather = (city) => {
     <h4>Country: ${city.sys.country}</h4>
     <h3>Temp: ${Math.round(temprature)}°C</h3>
     <h5>Weather: ${city.weather[0].description}</h5>
-    <p><strong>Date: </strong>  ${nowInLocalTime}</p>
+    <p><strong>Date:</strong>  ${nowInLocalTime}</p>
     `;
   }
   document.getElementById("weather-input").value = "";
