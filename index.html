@@ -13,49 +13,7 @@
       crossorigin="anonymous"
     />
     <!-- venilla css -->
-    <style>
-      body {
-        background-image: url(images/bg-image.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-      .width {
-        width: 30rem !important;
-        border-radius: 10px;
-      }
-      #wrong-name,
-      #empty {
-        color: red;
-      }
-      .weather-div {
-        color: white;
-        text-align: center;
-        margin-top: 30px;
-      }
-      .weather-div h2 {
-        font-size: 50px;
-      }
-      .weather-div h3 {
-        font-size: 45px;
-      }
-      .copyright {
-        text-align: center;
-        position: absolute;
-        bottom: 0px;
-      }
-      @media only screen and (max-width: 600px) {
-        body {
-          background-color: lightblue;
-        }
-        #weather-input {
-          width: 150px !important;
-          font-size: 10px;
-        }
-        .copyright {
-          font-size: 10px;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header>
@@ -66,9 +24,10 @@
               id="weather-input"
               type="text"
               class="form-control width"
-              placeholder="Enter a location for Weather ..."
+              placeholder="Enter your city name..."
               aria-label="Recipient's username"
               aria-describedby="basic-addon2"
+              title="Enter a location for Weather ..."
             />
             <span
               class="input-group-text bg-danger rounded-3"
@@ -81,13 +40,11 @@
       </div>
     </header>
     <main>
-      <!-- error for wrong city name -->
-      <div id="wrong-name" class="text-center fs-3 bg-warning d-none">
-        Sorry! There is no city in this name!!!
-      </div>
-      <!-- error for empty search bar -->
-      <div id="empty" class="text-center fs-3 bg-warning d-none">
-        Please enter your city name!!!
+      <!-- spinner -->
+      <div class="text-center">
+        <div id="spinner" class="spinner-grow d-none" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
       </div>
       <!-- div for weather -->
       <div id="weather-sec"></div>
@@ -96,7 +53,12 @@
       <div class="text-light">
         <p class="copyright">
           COPYRIGHT © 2021 | ALL RIGHTS RESERVED BY <br />
-          MOHAMMAD ISHRUL KAYES
+          <a
+            class="text-light"
+            target="_blank"
+            href="https://www.facebook.com/cocking.is"
+            >MOHAMMAD ISHRUL KAYES</a
+          >
         </p>
       </div>
     </footer>
