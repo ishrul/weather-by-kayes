@@ -25,6 +25,15 @@ const loadWeather = () => {
   }
 };
 
+// triger to enter button
+
+const go = document.getElementById("search-btn");
+const txt = document.getElementById("weather-input");
+
+txt.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") go.click();
+});
+
 const displayWeather = (city) => {
   const weatherSec = document.getElementById("weather-sec");
   weatherSec.textContent = "";
